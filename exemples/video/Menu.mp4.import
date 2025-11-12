@@ -1,0 +1,16 @@
+[remap]
+
+importer="godot.video.importer.videoconverter"
+type="VideoStreamTheora"
+uid="uid://dugotkjfswboh"
+path="res://.godot/imported/Menu.mp4-1912079faf8f9dea181da4ccabd0f8be.ogv"
+
+[deps]
+
+files=["res://.godot/imported/Menu.mp4-1912079faf8f9dea181da4ccabd0f8be.ogv"]
+
+source_file="res://exemples/video/Menu.mp4"
+dest_files=["res://.godot/imported/Menu.mp4-1912079faf8f9dea181da4ccabd0f8be.ogv", "res://.godot/imported/Menu.mp4-1912079faf8f9dea181da4ccabd0f8be.ogv"]
+
+[params]
+
