@@ -22,6 +22,7 @@ func _get_priority() -> float:
 func _get_import_options(path: String, preset_index: int) -> Array[Dictionary]:
 	return []
 
+# documentation source https://docs.godotengine.org/fr/4.x/tutorials/animation/playing_videos.html#doc-playing-videos-recommended-theora-encoding-settings
 func _import(source_file: String, save_path: String, options: Dictionary, platform_variants: Array, gen_files: Array) -> int:
 	var ffmpeg_path := "ffmpeg"
 	var src := ProjectSettings.globalize_path(source_file)
