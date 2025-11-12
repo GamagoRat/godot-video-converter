@@ -1,22 +1,33 @@
-# 🎬 Godot Video Converter
+<div align="center">
 
-[![Made with Godot](https://img.shields.io/badge/Made%20with-Godot%204-478cbf.svg?style=for-the-badge&logo=godot)](https://godotengine.org)
+# Godot Video Converter
+[![Made with Godot](https://img.shields.io/badge/Made%20with-Godot%204-478cbf.svg?style=for-the-badge&logo=godot)](https://godotengine.org) [![Release](https://img.shields.io/github/v/release/GamagoRat/godot-video-converter?style=for-the-badge&logo=github)](https://github.com/GamagoRat/godot-video-converter/releases)
 
-Un plugin **Godot** qui permet de **convertir des vidéos via FFmpeg** en format `.ogg` compatible avec Godot lors de l'import.
+</div>
+
+Un plugin **Godot** pour **convertir automatiquement des vidéos en `.ogg`** compatibles avec Godot via **FFmpeg** lors de l'import. Idéal pour intégrer facilement des vidéos dans vos projets Godot sans vous soucier du format.
+
+---
+
+## 📦 Obtenir le plugin
+
+Le plugin se trouve dans les **releases GitHub** :  
+[Releases · GamagoRat/godot-video-converter](https://github.com/GamagoRat/godot-video-converter/releases) // pas disponible pour le moment !
 
 ---
 
 ## ⚙️ Fonctionnalités
 
-- Conversion automatique de vidéos en `.ogg` lisible par Godot.  
-- Intégration directe dans le processus d'import de Godot.  
-- Facile à utiliser pour tous les projets Godot nécessitant des vidéos.  
+- Conversion automatique des vidéos en `.ogg` lisibles par Godot.  
+- Intégration directe dans le processus d'import.  
+- Facile à utiliser, même pour ceux qui ne sont pas développeurs.  
+- Compatible avec tous les projets Godot nécessitant des vidéos.
 
 ---
 
 ## 🛠 Installation
 
-1. Clonez ce dépôt dans le dossier `addons` de votre projet Godot :
+1. Clonez le dépôt dans le dossier `addons` de votre projet Godot :
 
 ```bash
 git clone https://github.com/GamagoRat/godot-video-converter.git addons/videoconverter
@@ -32,24 +43,25 @@ git clone https://github.com/GamagoRat/godot-video-converter.git addons/videocon
 ## 📚 Utilisation
 
 1. Ajoutez vos fichiers vidéo dans le projet.
-2. Godot convertira automatiquement les vidéos en `.ogg` lors de l'import.
-3. Utilisez-les dans vos scènes comme n’importe quel autre `VideoPlayer`.
+2. Lors de l'import, le plugin convertira automatiquement les vidéos en `.ogg`.
+3. Utilisez-les ensuite dans vos scènes comme un `VideoPlayer` classique.
 
 ---
 
 ## 💡 Conseils
 
 * Vérifiez que vos vidéos sont dans un format compatible avec FFmpeg.
-* Pour de meilleures performances, utilisez des vidéos de résolution adaptée à votre projet.
+* Pour de meilleures performances, adaptez la résolution de la vidéo à vos besoins de projet.
+* Testez le plugin avec un petit échantillon avant d’importer des vidéos lourdes.
 
 ---
 
 ## 🤝 Contributions
 
-Nous acceptons toutes les contributions !
+Toutes les contributions sont **les bienvenues** !
 
-* Améliorez le plugin, proposez de nouvelles fonctionnalités ou corrigez des bugs.
-* Merci de respecter les bonnes pratiques de Git : pull requests claires, code lisible, documentation fournie.
+* Vous pouvez améliorer le plugin, ajouter des fonctionnalités ou corriger des bugs.
+* Merci de respecter les bonnes pratiques : pull requests claires, code lisible, documentation fournie.
 
 ---
 
@@ -60,4 +72,4 @@ Nous acceptons toutes les contributions !
 
 ---
 
-Nous espérons que ce plugin vous sera utile pour vos projets Godot ! 🚀
+Nous espérons que ce plugin vous facilitera l’intégration de vidéos dans vos projets Godot ! 🚀
