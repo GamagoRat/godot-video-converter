@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://r3leudafwcln"]
-
-[ext_resource type="VideoStream" uid="uid://dugotkjfswboh" path="res://exemples/video/Menu.mp4" id="1_k5g1l"]
-
-[node name="Default" type="VideoStreamPlayer"]
-offset_right = 1920.0
-offset_bottom = 1080.0
-stream = ExtResource("1_k5g1l")
-autoplay = true
