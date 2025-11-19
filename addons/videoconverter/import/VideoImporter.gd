@@ -77,7 +77,9 @@ func _get_import_options(path: String, preset_index: int) -> Array:
 
 # documentation source https://docs.godotengine.org/fr/4.x/tutorials/animation/playing_videos.html#doc-playing-videos-recommended-theora-encoding-settings
 func _import(source_file: String, save_path: String, options: Dictionary, platform_variants: Array, gen_files: Array) -> int:
-	var ffmpeg_path := "ffmpeg"
+	var config: Config = Engine.get_singleton("config")
+	
+	var ffmpeg_path := "ffmpeg" if config.ffmpeg_var else config.ffmpeg_path
 	var src := ProjectSettings.globalize_path(source_file)
 	var out_rel := save_path + "." + _get_save_extension()
 	var out_abs := ProjectSettings.globalize_path(out_rel)

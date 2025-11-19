@@ -1,20 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://r3leudafwcln"]
+[gd_scene format=3 uid="uid://r3leudafwcln"]
 
-[ext_resource type="VideoStream" uid="uid://04mr6jjm5vuu" path="res://examples/video/Menu.mp4" id="1_k5g1l"]
-
-[node name="Default" type="VideoStreamPlayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 1344.0
-offset_bottom = 756.0
+[node name="Default" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.8, 0.8)
-stream = ExtResource("1_k5g1l")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 autoplay = true
-loop = true
