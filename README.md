@@ -13,7 +13,7 @@ Un plugin **Godot** pour **convertir automatiquement des vidéos en `.ogg`** com
 ## 📦 Obtenir le plugin
 
 Le plugin se trouve dans les **releases GitHub** :  
-[Releases · GamagoRat/godot-video-converter](https://github.com/GamagoRat/godot-video-converter/releases) // pas disponible pour le moment !
+[Releases · GamagoRat/godot-video-converter](https://github.com/GamagoRat/godot-video-converter/releases)
 
 ---
 
