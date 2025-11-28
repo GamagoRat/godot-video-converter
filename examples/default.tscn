@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://r3leudafwcln"]
+[gd_scene load_steps=6 format=3 uid="uid://r3leudafwcln"]
 
-[ext_resource type="VideoStream" uid="uid://04mr6jjm5vuu" path="res://examples/video/Menu.mp4" id="1_768ff"]
+[ext_resource type="Script" uid="uid://4cbiwwv5ko8m" path="res://examples/scripts/exemples.gd" id="1_768ff"]
+[ext_resource type="VideoStream" uid="uid://ch8w3ddo4fnqu" path="res://examples/video/Menu.avi" id="2_t0g2o"]
+[ext_resource type="VideoStream" uid="uid://bxo7kao30pyea" path="res://examples/video/Menu.mkv" id="3_l301q"]
+[ext_resource type="VideoStream" uid="uid://fu0sopb7nc8q" path="res://examples/video/Menu.mov" id="4_d74lq"]
+[ext_resource type="VideoStream" uid="uid://04mr6jjm5vuu" path="res://examples/video/Menu.mp4" id="5_ebwp6"]
 
 [node name="Default" type="Control"]
 layout_mode = 3
@@ -10,12 +14,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.8, 0.8)
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 507.0
-offset_bottom = 23.0
-text = "Please place the Menu.mp4 video in the VideoStreamPlayer node."
+script = ExtResource("1_768ff")
+video = Array[VideoStream]([ExtResource("2_t0g2o"), ExtResource("3_l301q"), ExtResource("4_d74lq"), ExtResource("5_ebwp6")])
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
@@ -24,6 +24,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("1_768ff")
 autoplay = true
-loop = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 507.0
+offset_bottom = 23.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Please place the Menu.mp4 video in the VideoStreamPlayer node."
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

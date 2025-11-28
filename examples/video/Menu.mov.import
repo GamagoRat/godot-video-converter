@@ -1,0 +1,20 @@
+[remap]
+
+importer="godot.video.importer.videoconverter"
+type="VideoStreamTheora"
+uid="uid://fu0sopb7nc8q"
+path="res://.godot/imported/Menu.mov-2553e4cdb8d361935ac1fab94836b42a.ogv"
+
+[deps]
+
+files=["res://.godot/imported/Menu.mov-2553e4cdb8d361935ac1fab94836b42a.ogv"]
+
+source_file="res://examples/video/Menu.mov"
+dest_files=["res://.godot/imported/Menu.mov-2553e4cdb8d361935ac1fab94836b42a.ogv", "res://.godot/imported/Menu.mov-2553e4cdb8d361935ac1fab94836b42a.ogv"]
+
+[params]
+
+video_bitrate=4000
+fps=24
+gop_size=64
+qv=6

@@ -29,6 +29,8 @@ Le plugin se trouve dans les **releases GitHub** :
 
 ⚠️ **Ne pas réimporter une vidéo référencée dans une scène** pour éviter les erreurs de chargement (veuillez supprimer la référence avant de réimporter).
 
+⚠️ Les versions officielles actuelles de FFmpeg comportent quelques bogues dans leur multiplexeur Ogg/Theora. Il est fortement recommandé d'utiliser l'une des dernières versions statiques quotidiennes ou de compiler à partir de leur branche principale pour bénéficier des derniers correctifs.
+
 ## 🛠 Installation
 
 1. Clonez le dépôt dans le dossier `addons` de votre projet Godot :
@@ -73,6 +75,7 @@ Toutes les contributions sont **les bienvenues** !
 
 - [FFmpeg](https://ffmpeg.org) – outil de conversion vidéo utilisé par le plugin
 - [Godot Engine](https://godotengine.org) – moteur de jeu utilisé
+- [Godot Documentation FFmpeg](https://docs.godotengine.org/fr/4.x/tutorials/animation/playing_videos.html#doc-playing-videos-recommended-theora-encoding-settings) – Playing video recommended Theora encoding settings
 
 ---
 

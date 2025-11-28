@@ -21,11 +21,9 @@ func _get_resource_type() -> String:
 func _get_priority() -> float:
 	return 1.0
 	
-# --- Nombre de presets disponibles ---
 func _get_preset_count() -> int:
 	return Presets.size()
 
-# --- Nom du preset ---
 func _get_preset_name(preset_index: int) -> String:
 	match preset_index:
 		Presets.DEFAULT:
@@ -33,7 +31,6 @@ func _get_preset_name(preset_index: int) -> String:
 		_:
 			return "Unknown"
 
-# --- Options de l'importeur ---
 func _get_import_options(path: String, preset_index: int) -> Array:
 	match preset_index:
 		Presets.DEFAULT:
@@ -73,7 +70,6 @@ func _get_import_options(path: String, preset_index: int) -> Array:
 			]
 		_:
 			return []
-
 
 # documentation source https://docs.godotengine.org/fr/4.x/tutorials/animation/playing_videos.html#doc-playing-videos-recommended-theora-encoding-settings
 func _import(source_file: String, save_path: String, options: Dictionary, platform_variants: Array, gen_files: Array) -> int:
