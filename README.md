@@ -1,6 +1,7 @@
 <div align="center">
 
 # Godot Video Converter
+
 [![Made with Godot](https://img.shields.io/badge/Made%20with-Godot%204-478cbf.svg?style=for-the-badge&logo=godot)](https://godotengine.org) [![Release](https://img.shields.io/github/v/release/GamagoRat/godot-video-converter?style=for-the-badge&logo=github)](https://github.com/GamagoRat/godot-video-converter/releases)
 
 </div>
@@ -18,10 +19,13 @@ Le plugin se trouve dans les **releases GitHub** :
 
 ## ⚙️ Fonctionnalités
 
-- Conversion automatique des vidéos en `.ogg` lisibles par Godot.  
-- Intégration directe dans le processus d'import.  
-- Facile à utiliser, même pour ceux qui ne sont pas développeurs.  
+- Conversion automatique des vidéos en `.ogg` lisibles par Godot.
+- Intégration directe dans le processus d'import.
+- Facile à utiliser, même pour ceux qui ne sont pas développeurs.
 - Compatible avec tous les projets Godot nécessitant des vidéos.
+
+⚠️ **Nécessite FFmpeg** installé sur votre système pour fonctionner correctement.
+⚠️ **Ne pas réimporter avec l'éditeur** après conversion, il y a un soucis connu de permission avec ffmpeg quand on essaie de reimporter une vidéo déjà convertie.
 
 ---
 
@@ -31,7 +35,7 @@ Le plugin se trouve dans les **releases GitHub** :
 
 ```bash
 git clone https://github.com/GamagoRat/godot-video-converter.git addons/videoconverter
-````
+```
 
 2. Activez le plugin dans Godot via :
    `Project` → `Project Settings` → `Plugins` → `VideoConverter` → `Enable`.
@@ -50,9 +54,9 @@ git clone https://github.com/GamagoRat/godot-video-converter.git addons/videocon
 
 ## 💡 Conseils
 
-* Vérifiez que vos vidéos sont dans un format compatible avec FFmpeg.
-* Pour de meilleures performances, adaptez la résolution de la vidéo à vos besoins de projet.
-* Testez le plugin avec un petit échantillon avant d’importer des vidéos lourdes.
+- Vérifiez que vos vidéos sont dans un format compatible avec FFmpeg.
+- Pour de meilleures performances, adaptez la résolution de la vidéo à vos besoins de projet.
+- Testez le plugin avec un petit échantillon avant d’importer des vidéos lourdes.
 
 ---
 
@@ -60,15 +64,15 @@ git clone https://github.com/GamagoRat/godot-video-converter.git addons/videocon
 
 Toutes les contributions sont **les bienvenues** !
 
-* Vous pouvez améliorer le plugin, ajouter des fonctionnalités ou corriger des bugs.
-* Merci de respecter les bonnes pratiques : pull requests claires, code lisible, documentation fournie.
+- Vous pouvez améliorer le plugin, ajouter des fonctionnalités ou corriger des bugs.
+- Merci de respecter les bonnes pratiques : pull requests claires, code lisible, documentation fournie.
 
 ---
 
 ## 🔗 Ressources
 
-* [FFmpeg](https://ffmpeg.org) – outil de conversion vidéo utilisé par le plugin
-* [Godot Engine](https://godotengine.org) – moteur de jeu utilisé
+- [FFmpeg](https://ffmpeg.org) – outil de conversion vidéo utilisé par le plugin
+- [Godot Engine](https://godotengine.org) – moteur de jeu utilisé
 
 ---
 
