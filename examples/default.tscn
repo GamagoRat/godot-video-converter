@@ -1,10 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://r3leudafwcln"]
+[gd_scene load_steps=2 format=3 uid="uid://r3leudafwcln"]
 
 [ext_resource type="Script" uid="uid://4cbiwwv5ko8m" path="res://examples/scripts/exemples.gd" id="1_768ff"]
-[ext_resource type="VideoStream" uid="uid://ch8w3ddo4fnqu" path="res://examples/video/Menu.avi" id="2_t0g2o"]
-[ext_resource type="VideoStream" uid="uid://bxo7kao30pyea" path="res://examples/video/Menu.mkv" id="3_l301q"]
-[ext_resource type="VideoStream" uid="uid://fu0sopb7nc8q" path="res://examples/video/Menu.mov" id="4_d74lq"]
-[ext_resource type="VideoStream" uid="uid://04mr6jjm5vuu" path="res://examples/video/Menu.mp4" id="5_ebwp6"]
 
 [node name="Default" type="Control"]
 layout_mode = 3
@@ -15,7 +11,6 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_768ff")
-video = Array[VideoStream]([ExtResource("2_t0g2o"), ExtResource("3_l301q"), ExtResource("4_d74lq"), ExtResource("5_ebwp6")])
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
