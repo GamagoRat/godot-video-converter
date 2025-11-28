@@ -80,11 +80,18 @@ func _import(source_file: String, save_path: String, options: Dictionary, platfo
 	var config: Config = Engine.get_singleton("config")
 	
 	var ffmpeg_path := "ffmpeg" if config.ffmpeg_var else config.ffmpeg_path
+	if ffmpeg_path == "":
+		push_error("The path is empty, please specify a valid path for using ffmpeg.")
+		return ERR_CANT_CREATE
+		
 	var src := ProjectSettings.globalize_path(source_file)
+	
 	var out_rel := save_path + "." + _get_save_extension()
 	var out_abs := ProjectSettings.globalize_path(out_rel)
 	
-	# Récupération des options utilisateur ou valeurs par défaut
+	var temp_filename := "temp_" + str(Time.get_ticks_msec()) + "_" + out_rel.get_file()
+	var out_temp_abs := out_abs.get_base_dir().path_join(temp_filename)
+	
 	var bitrate: int = int(options.get("video_bitrate", 4000) * 1000)
 	var fps: int = int(options.get("fps", 24))
 	var gop_size: int = int(options.get("gop_size", 64))
@@ -96,7 +103,7 @@ func _import(source_file: String, save_path: String, options: Dictionary, platfo
 		"-r", str(fps),
 		"-q:v", str(qv),
 		"-g:v", str(gop_size),
-		out_abs
+		out_temp_abs
 	]
 	
 	var output := []
@@ -104,11 +111,27 @@ func _import(source_file: String, save_path: String, options: Dictionary, platfo
 	
 	if exit_code != 0:
 		push_error("Video conversion failed with exit code %d. Output:\n%s" % [exit_code, PackedStringArray(output)])
+		if FileAccess.file_exists(out_temp_abs):
+			DirAccess.remove_absolute(out_temp_abs)
 		return ERR_CANT_CREATE
 
-	if not FileAccess.file_exists(out_abs):
+	if not FileAccess.file_exists(out_temp_abs):
 		push_error("Video conversion failed: output file was not created.")
 		return ERR_CANT_CREATE
 
+	var dir = DirAccess.open(out_abs.get_base_dir())
+	if dir:
+		if FileAccess.file_exists(out_abs):
+			var err = dir.remove(out_abs)
+			if err != OK:
+				push_error("LOCKING ERROR: Unable to replace the video file. It is probably being used by Godot. Deselect the video or close the scene using it.")
+				dir.remove(out_temp_abs)
+				return ERR_FILE_CANT_WRITE
+		
+		var rename_err = dir.rename(out_temp_abs, out_abs)
+		if rename_err != OK:
+			push_error("Error renaming temporary file.")
+			return ERR_CANT_CREATE
+	
 	gen_files.append(out_rel)
 	return OK

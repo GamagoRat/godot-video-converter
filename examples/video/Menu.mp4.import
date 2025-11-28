@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/Menu.mp4-d119007d6fb6a9a28955a79530260ef9.ogv
 
 [params]
 
-video_bitrate=4000
+video_bitrate=8000
 fps=24
-gop_size=64
-qv=6
+gop_size=40
+qv=7

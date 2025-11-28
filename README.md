@@ -23,11 +23,11 @@ Le plugin se trouve dans les **releases GitHub** :
 - Intégration directe dans le processus d'import.
 - Facile à utiliser, même pour ceux qui ne sont pas développeurs.
 - Compatible avec tous les projets Godot nécessitant des vidéos.
+- Utilisation d'un chemin configurable pour FFmpeg.
 
 ⚠️ **Nécessite FFmpeg** installé sur votre système pour fonctionner correctement.
-⚠️ **Ne pas réimporter avec l'éditeur** après conversion, il y a un soucis connu de permission avec ffmpeg quand on essaie de reimporter une vidéo déjà convertie.
 
----
+⚠️ **Ne pas réimporter une vidéo référencée dans une scène** pour éviter les erreurs de chargement (veuillez supprimer la référence avant de réimporter).
 
 ## 🛠 Installation
 
